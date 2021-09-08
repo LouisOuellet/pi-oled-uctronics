@@ -4,6 +4,9 @@ apt-get install -y build-essential make
 
 sourceDir=$(dirname $(readlink -f $0))
 
+cd ${sourceDir}/C
+make clean && make
+
 if [ -f "/etc/rc.local"]; then
   echo "
 cd ${sourceDir}/C
