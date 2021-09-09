@@ -256,7 +256,7 @@ void LCD_DisplayTemperature(void)
   buffer[3]='\0';
   strcpy(IPSource,GetIpAddress());   //Get the IP address of the device's wireless network card
   OLED_Clear();                                        //Remove the interface
-  // OLED_DrawBMP(0,0,128,4,BMP,0);
+  OLED_DrawBMP(0,0,128,4,BMP,0);
   OLED_ShowString(0,0,IPSource,8);          //Send the IP address to the lower machine
   if(temp>=100)
   {
@@ -273,6 +273,7 @@ void LCD_DisplayTemperature(void)
   {
     OLED_ShowChar(66,3,temp+'0',8);
   }
+  OLED_ShowString(80,3,'C',8);
   OLED_ShowString(87,3,buffer,8);                        //Display CPU load
 }
 
