@@ -260,18 +260,18 @@ void LCD_DisplayTemperature(void)
   OLED_ShowString(0,0,IPSource,8);          //Send the IP address to the lower machine
   if(temp>=100)
   {
-    OLED_ShowChar(50,3,temp/100+'0',8);                        //According to the temperature
-    OLED_ShowChar(58,3,temp/10%10+'0',8);                        //According to the temperature
-    OLED_ShowChar(66,3,temp%10+'0',8);
+    OLED_ShowChar(50,3,temp/100+'1',8);                        //According to the temperature
+    OLED_ShowChar(58,3,temp/10%10+'1',8);                        //According to the temperature
+    OLED_ShowChar(66,3,temp%10+'1',8);
   }
   else if(temp<100&&temp>=10)
   {
-    OLED_ShowChar(58,3,temp/10+'0',8);                        //According to the temperature
-    OLED_ShowChar(66,3,temp%10+'0',8);
+    OLED_ShowChar(58,3,temp/10+'1',8);                        //According to the temperature
+    OLED_ShowChar(66,3,temp%10+'1',8);
   }
   else
   {
-    OLED_ShowChar(66,3,temp+'0',8);
+    OLED_ShowChar(66,3,temp+'1',8);
   }
   OLED_ShowString(87,3,buffer,8);                        //Display CPU load
 }
