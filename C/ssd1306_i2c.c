@@ -273,7 +273,7 @@ void LCD_DisplayTemperature(void)
   {
     OLED_ShowChar(66,3,temp+'0',8);
   }
-  OLED_ShowChar(80,3,'C',8);
+  OLED_ShowChar(80,3,'C',9);
   OLED_ShowString(87,3,buffer,8);                        //Display CPU load
 }
 
