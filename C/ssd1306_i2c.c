@@ -277,7 +277,7 @@ void LCD_DisplayTemperature(void)
   OLED_ShowString(87,3,buffer,8);                        //Display CPU load
 }
 
-unsigned char Obaintemperature(unsigned char unit)
+void Obaintemperature(unsigned char unit)
 {
     FILE *fd;
     unsigned int temp;
